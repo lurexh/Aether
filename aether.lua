@@ -1,11 +1,5 @@
--- Aether v0.0.1
--- Murder Mystery 2 utility suite
--- Author: equinoz
--- Game: 66654135 (MM2)
--- Rate-limited FE. No remote spam. No kick triggers.
-
-if getgenv().AETHER_LOADED then
-    getgenv().AETHER_UNLOAD()
+if getgenv().AETHER_LOADED and type(getgenv().AETHER_UNLOAD) == "function" then
+    pcall(getgenv().AETHER_UNLOAD)
 end
 getgenv().AETHER_LOADED = true
 
